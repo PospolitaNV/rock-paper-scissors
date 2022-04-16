@@ -1,6 +1,6 @@
 # Rock, Paper, Scissors
 
-Example of extensible game
+Example of extensible game. <b> Please, ensure your console supports colors. </b>
 
 ### How to run
 
