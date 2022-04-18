@@ -10,7 +10,7 @@ You can build the project and then execute it, single command:
 ```
 Or you can just execute already packaged .jar:
 ```shell
-java -jar rock-paper-scissors-1.0-SNAPSHOT.jar
+java -jar target/rock-paper-scissors-1.0-SNAPSHOT.jar
 ```
 
 ### Dependencies
@@ -22,6 +22,8 @@ java -jar rock-paper-scissors-1.0-SNAPSHOT.jar
 <b> jansi </b> - just fun colors for the CLI, so the reviewer wouldn't be bored (could be thrown away)
 <br>
 <b> reflections </b> - convenient library to work with reflections (see ComputerPlayer)
+<br>
+<b>slf4j-nop</b> - additional dependency for text-io, otherwise console contains warnings, it's user-unfriendly
 
 ### Thoughts about the solution
 

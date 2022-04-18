@@ -9,7 +9,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * Main game class providing game engine via Template Method pattern
+ * Main game class providing game engine using Template Method pattern
  */
 public abstract class Game {
 

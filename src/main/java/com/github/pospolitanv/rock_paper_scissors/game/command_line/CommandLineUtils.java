@@ -2,6 +2,9 @@ package com.github.pospolitanv.rock_paper_scissors.game.command_line;
 
 import org.fusesource.jansi.Ansi;
 
+/**
+ * Utility class for more friendly usage of ansi
+ */
 public class CommandLineUtils {
 
     public static String fgColor(Ansi.Color color, String text) {

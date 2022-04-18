@@ -20,6 +20,9 @@ import static org.fusesource.jansi.Ansi.Attribute.INTENSITY_BOLD;
 import static org.fusesource.jansi.Ansi.Attribute.UNDERLINE;
 import static org.fusesource.jansi.Ansi.Color.*;
 
+/**
+ * Implementation of Command Line UI interactive game
+ */
 public class CommandLineGame extends Game {
 
     private final TextIO textIO;
@@ -75,7 +78,10 @@ public class CommandLineGame extends Game {
 
     @Override
     protected int initRounds() {
-        return textIO.newIntInputReader().withMinVal(1).withMaxVal(100)
+        return textIO.newIntInputReader()
+                .withMinVal(1)
+                .withMaxVal(100)
+                .withDefaultValue(5)
                 .read("How many "
                       + CommandLineUtils.fgColorAndTextStyle(GREEN, UNDERLINE, "rounds")
                       + " would you play? (1-100)");
@@ -113,16 +119,17 @@ public class CommandLineGame extends Game {
                     + CommandLineUtils.fgColor(RED, "TIE")
                     + ". Both players chose "
                     + playersMoves.values().stream().findFirst().get().getEmoji()
-                    + " this round! Let's try once more...");
+                    + "  this round! Let's try once more...");
         } else {
             textIO.getTextTerminal().println(
                     "Winner of this round is "
                     + CommandLineUtils.fgColor(GREEN, winner.getName())
                     + " !");
             textIO.getTextTerminal().println(
-                    "He chose "
+                    CommandLineUtils.fgColor(GREEN, winner.getName()) +
+                    " chose "
                     + playersMoves.get(winner).getEmoji()
-                    + " over "
+                    + "  over "
                     + playersMoves.values().stream()
                             .filter(move -> move != playersMoves.get(winner))
                             .findFirst().get().getEmoji());

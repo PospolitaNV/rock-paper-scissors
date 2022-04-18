@@ -1,5 +1,8 @@
 package com.github.pospolitanv.rock_paper_scissors.moves;
 
+/**
+ * Available game modes by moves
+ */
 public enum MovesGameMode {
     ROCK_PAPER_SCISSORS(3, "Original (Rock, Paper, Scissors)"),
     ROCK_PAPER_SCISSORS_LIZARD_SPOCK(5, "Extended (Rock, Paper, Scissors, Lizard, Spock)");

@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Provides ability to implement different player's strategies
+ * Provides ability to implement different computer strategies
  */
 public interface ComputerStrategy {
 

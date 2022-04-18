@@ -46,10 +46,9 @@ public class ComputerPlayer implements Player {
 
     /**
      * We create random strategy using reflection. It's a good way to extend, because now I just implement new {@link
-     * ComputerStrategy} to seamless add new strategy into the game, decoupling code. For example, Spring provides it
-     * out-of-the box.
+     * ComputerStrategy} to seamlessly add a new strategy into the game, decoupling code.
+     * For example, Spring provides it out-of-the box.
      *
-     * @param gameMode
      */
     private ComputerStrategy getRandomStrategy(MovesGameMode gameMode) {
         Reflections reflections = new Reflections("com.github.pospolitanv.rock_paper_scissors.strategy");

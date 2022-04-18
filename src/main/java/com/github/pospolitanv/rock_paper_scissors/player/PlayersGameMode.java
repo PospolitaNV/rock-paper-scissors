@@ -1,5 +1,8 @@
 package com.github.pospolitanv.rock_paper_scissors.player;
 
+/**
+ * Available game modes by players
+ */
 public enum PlayersGameMode {
     HUMAN_VS_HUMAN("Human vs Human"),
     HUMAN_VS_COMPUTER("Human vs Computer"),
